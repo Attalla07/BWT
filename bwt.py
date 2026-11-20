@@ -11,5 +11,12 @@ def bwt(testo) :
 
     print()
 
+#per ordinarlo in ordine alfabetico
+    print("In ordine alfabetico: ")
+    rotazioni.sort()
+    for r in rotazioni:
+        print(r)
+        
+
     
 
