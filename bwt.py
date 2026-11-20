@@ -16,7 +16,17 @@ def bwt(testo) :
     rotazioni.sort()
     for r in rotazioni:
         print(r)
-        
+
+    print()
+
+#per prendere l'ultima lettera di ogni riga della partte prima
+    print("Risultato: ")
+    risultato=""
+    for r in rotazioni:
+        risultato += +r[-1]
+        print(risultato)
+
+    return risultato
+
 
     
-
