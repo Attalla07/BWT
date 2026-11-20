@@ -5,7 +5,8 @@ PORTA= 5000
 
 parola= input("Scrivi una stringa: ")
 
-client= socket.socket()
+
+client= socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 client.connect((INDIRIZZO,PORTA))
 
 client.send(parola.encode())

@@ -5,7 +5,7 @@ INDIRIZZO= "127.0.0.1"
 PORTA= 5000
 
 #Per creare il serverr e meterlo in ascolto
-server= socket.socket()
+server= socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 server.bind((INDIRIZZO,PORTA))
 server.listen()
 print("Server accesso e in aspetto di un cliente")
