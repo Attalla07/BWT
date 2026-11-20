@@ -1,5 +1,5 @@
 def bwt(testo) :
-    test += "$" #per aggungere il $ alla fine
+    testo += "$" #per aggungere il $ alla fine
 
 #per fare le rotazioni
     print("Rotazioni: ")
@@ -19,14 +19,17 @@ def bwt(testo) :
 
     print()
 
-#per prendere l'ultima lettera di ogni riga della partte prima
-    print("Risultato: ")
+#per prendere l'ultima lettera di ogni riga
+    print("Ultima lettera di ogni riga: ")
     risultato=""
     for r in rotazioni:
-        risultato += +r[-1]
+        risultato = risultato+r[-1]
         print(risultato)
 
     return risultato
 
-
+#per riuscire ad eseguire questo file da solo
+if __name__ == "__main__":
+    parola= input("Scrivi una stringa: ")
+    print("Risultato finale: ",bwt(parola))
     
