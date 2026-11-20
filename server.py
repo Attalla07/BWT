@@ -18,3 +18,13 @@ while True:
     parola= client.recv(4096).decode()
     print("messaggio ricevuto: ", parola)
 
+#per dare un errore se c'e' gia' un $ nella parola
+if "$" in parola :
+    risposta= "non puoi utilizzare il $"
+else : 
+    risposta= bwt(parola)
+
+#per mandaare la ris. al cliente da testo in byte e poi chiudo
+client.send(risposta.encode())
+client.close()
+print("Risposta inviata: ", risposta)
